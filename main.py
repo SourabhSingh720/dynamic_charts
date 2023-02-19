@@ -6,13 +6,10 @@ import seaborn as sns
 x1=[1,2,3,4,5,7]
 y1=[10,20,30,40,50,60]
 y2=[1,2,3,454,54]
-df=pd.DataFrame([x1,y1,y2])
-#Wind Speed_km/h	
+df=pd.DataFrame([x1,y1,y2])	
 df_weather=pd.read_csv('Weather Data.csv')
 
 df_weather_int=df_weather.drop(['Date/Time','Weather'],axis=1)
-
-legend_str=None
 
 dict_default=dict(data=None,x=None, y=None,bins=50,title=None,xlabel=None,ylabel=None,color=None,sns_color='RdBu',legend_bool=True,
                 explode=None,autopct='%1.1f%%',xlim=None,ylim=None,hue=None,palette=None,xticks=None,yticks=None,color_count='b'
